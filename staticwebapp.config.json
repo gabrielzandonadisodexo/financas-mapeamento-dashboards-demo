@@ -1,0 +1,40 @@
+{
+  "routes": [
+    {
+      "route": "/downloads/output_automacao.xlsx",
+      "allowedRoles": ["authenticated"],
+      "headers": {
+        "content-disposition": "attachment; filename=\"output_automacao.xlsx\""
+      }
+    },
+    {
+      "route": "/downloads/documentacao_mapeamento_dashboards_financas.pdf",
+      "allowedRoles": ["authenticated"],
+      "headers": {
+        "content-disposition": "attachment; filename=\"documentacao_mapeamento_dashboards_financas.pdf\""
+      }
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/aad",
+      "statusCode": 302
+    }
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "mimeTypes": {
+    ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    ".pdf": "application/pdf"
+  },
+  "globalHeaders": {
+    "cache-control": "no-store",
+    "x-content-type-options": "nosniff",
+    "referrer-policy": "same-origin"
+  }
+}

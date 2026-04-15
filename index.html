@@ -1,17 +1,17 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo - Mapeamento de Dashboards</title>
+  <title>Mapeamento de Dashboards de FinanÃ§as</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <aside class="sidebar" aria-label="Menu principal">
     <div class="brand">
-      <span class="brand-mark">D</span>
+      <span class="brand-mark">F</span>
       <div>
-        <strong>Demo</strong>
+        <strong>FinanÃ§as</strong>
         <span>Origem dos dados</span>
       </div>
     </div>
@@ -20,34 +20,34 @@
       <a class="nav-item active" href="#resumo">Resumo</a>
       <a class="nav-item" href="#planilha">Planilha</a>
       <a class="nav-item" href="#arquitetura">Arquitetura</a>
-      <a class="nav-item" href="#seguranca">Segurança</a>
+      <a class="nav-item" href="#revisao">RevisÃ£o</a>
     </nav>
   </aside>
 
   <main class="content">
     <section class="intro" id="resumo">
-      <p class="eyebrow">Demonstração pública</p>
-      <h1>App de mapeamento de fontes e tabelas de dashboards</h1>
+      <p class="eyebrow">Tableau | FinanÃ§as | Abril de 2026</p>
+      <h1>Mapeamento de fontes e tabelas dos dashboards de FinanÃ§as</h1>
       <p class="lead">
-        Esta é uma versão pública sanitizada. Os arquivos reais, nomes de relatórios, links internos, fontes, schemas e tabelas foram removidos.
+        InventÃ¡rio consolidado para apoiar anÃ¡lise de origem dos dados, dependÃªncias dos relatÃ³rios e revisÃµes com POs e Ã¡reas de negÃ³cio.
       </p>
 
-      <div class="metrics" aria-label="Números de demonstração">
+      <div class="metrics" aria-label="NÃºmeros da execuÃ§Ã£o">
         <article class="metric">
-          <strong>000</strong>
-          <span>Painéis processados</span>
+          <strong data-metric="paineis">167</strong>
+          <span>PainÃ©is processados</span>
         </article>
         <article class="metric">
-          <strong>000</strong>
+          <strong data-metric="fontes">394</strong>
           <span>Fontes mapeadas</span>
         </article>
         <article class="metric">
-          <strong>000</strong>
+          <strong data-metric="tabelas">188</strong>
           <span>Tabelas/views distintas</span>
         </article>
         <article class="metric">
-          <strong>Demo</strong>
-          <span>Sem dados internos</span>
+          <strong data-metric="linhas">1.711</strong>
+          <span>Linhas no Excel final</span>
         </article>
       </div>
     </section>
@@ -55,29 +55,29 @@
     <section id="planilha" class="section-block">
       <div class="section-heading">
         <p class="eyebrow">Downloads</p>
-        <h2>Arquivos protegidos</h2>
-        <p>Os arquivos reais não foram publicados nesta versão pública.</p>
+        <h2>Planilha e relatÃ³rio</h2>
+        <p>Arquivos finais gerados pela execuÃ§Ã£o completa do mapeamento.</p>
       </div>
 
       <div class="download-grid">
         <article class="download-card">
           <div>
             <span class="file-type">XLSX</span>
-            <h3>Planilha real</h3>
-            <p>Disponível somente em ambiente interno autorizado.</p>
-            <span class="file-meta">Não publicado nesta versão</span>
+            <h3>output_automacao.xlsx</h3>
+            <p>Base consolidada com relatÃ³rio, datasource, link, schema e tabela.</p>
+            <span class="file-meta" data-file="excel">Arquivo Excel</span>
           </div>
-          <button class="button disabled" type="button" disabled>Download bloqueado</button>
+          <a class="button" href="./downloads/output_automacao.xlsx" download>Baixar planilha Excel</a>
         </article>
 
         <article class="download-card">
           <div>
             <span class="file-type">PDF</span>
-            <h3>Relatório real</h3>
-            <p>Disponível somente em ambiente interno autorizado.</p>
-            <span class="file-meta">Não publicado nesta versão</span>
+            <h3>documentaÃ§Ã£o do mapeamento</h3>
+            <p>Resumo executivo, mÃ©todo usado, nÃºmeros finais e pontos de revisÃ£o.</p>
+            <span class="file-meta" data-file="pdf">Arquivo PDF</span>
           </div>
-          <button class="button secondary disabled" type="button" disabled>Download bloqueado</button>
+          <a class="button secondary" href="./downloads/documentacao_mapeamento_dashboards_financas.pdf" download>Baixar relatÃ³rio PDF</a>
         </article>
       </div>
     </section>
@@ -86,35 +86,38 @@
       <div class="section-heading">
         <p class="eyebrow">Fluxo</p>
         <h2>Como o mapeamento percorre os dados</h2>
-        <p>Fluxo de referência da automação, sem expor links, nomes de fontes ou tabelas internas.</p>
+        <p>A automaÃ§Ã£o parte da lista de dashboards, navega no Tableau, lÃª as fontes e consolida a origem tÃ©cnica encontrada.</p>
       </div>
       <figure class="architecture">
-        <img src="./assets/arquitetura_automacao.png" alt="Fluxo da automação de mapeamento de dashboards">
-        <figcaption>Diagrama conceitual da automação.</figcaption>
+        <img src="./assets/arquitetura_automacao.png" alt="Fluxo da automaÃ§Ã£o de mapeamento de dashboards">
+        <figcaption>Fluxo usado como referÃªncia para a automaÃ§Ã£o.</figcaption>
       </figure>
     </section>
 
-    <section id="seguranca" class="section-block">
+    <section id="revisao" class="section-block">
       <div class="section-heading">
-        <p class="eyebrow">Governança</p>
-        <h2>Conteúdo removido da versão pública</h2>
+        <p class="eyebrow">Qualidade do inventÃ¡rio</p>
+        <h2>Pontos para revisÃ£o manual</h2>
       </div>
 
       <div class="review-list">
         <article>
-          <strong>0</strong>
-          <span>Links internos publicados</span>
+          <strong>33</strong>
+          <span>PainÃ©is sem workbook localizado pelo Data Details</span>
         </article>
         <article>
-          <strong>0</strong>
-          <span>Tabelas reais publicadas</span>
+          <strong>9</strong>
+          <span>Fontes sem Custom SQL ou tabela identificÃ¡vel</span>
         </article>
         <article>
-          <strong>0</strong>
-          <span>Arquivos reais para download</span>
+          <strong>1</strong>
+          <span>Painel sem datasource encontrado no workbook/lineage</span>
         </article>
       </div>
     </section>
   </main>
+
+  <script src="./app.js"></script>
 </body>
 </html>
+

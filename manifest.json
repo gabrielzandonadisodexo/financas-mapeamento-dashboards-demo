@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-04-15T12:30:36.192Z",
+  "metrics": {
+    "paineis": 167,
+    "linhas": 1711,
+    "fontes": 394,
+    "tabelas": 188,
+    "tabelasPreenchidas": 1668,
+    "erros": 33
+  },
+  "files": {
+    "excel": {
+      "size": 742140,
+      "updatedAt": "14/04/2026, 18:54"
+    },
+    "pdf": {
+      "size": 122240,
+      "updatedAt": "15/04/2026, 09:30"
+    }
+  }
+}
