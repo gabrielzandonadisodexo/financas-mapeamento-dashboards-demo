@@ -62,7 +62,7 @@ a {
 }
 
 .brand strong {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .brand span {
@@ -1034,6 +1034,226 @@ code {
   padding: 13px;
 }
 
+.similarity-bands {
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.similarity-band {
+  align-content: start;
+  min-height: 86px;
+  padding: 11px 12px;
+}
+
+.similarity-band strong {
+  font-size: 20px;
+}
+
+.similarity-band span {
+  font-size: 13px;
+}
+
+.similarity-band small {
+  font-size: 11px;
+}
+
+.similarity-panel {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0;
+}
+
+.similarity-board {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.similarity-board-header {
+  align-items: start;
+  display: grid;
+  gap: 6px;
+}
+
+.similarity-board-header h3 {
+  color: var(--sodexo-blue);
+  font-size: 21px;
+  margin: 0;
+}
+
+.similarity-board-header p {
+  color: var(--muted);
+  margin: 0;
+  max-width: 860px;
+}
+
+.similarity-summary-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.similarity-summary-tile {
+  background: var(--soft-blue);
+  border: 1px solid #c8d7ec;
+  border-radius: var(--radius);
+  padding: 12px;
+}
+
+.similarity-summary-tile strong {
+  color: var(--sodexo-blue);
+  display: block;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.similarity-summary-tile span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.similarity-accordion {
+  display: grid;
+  gap: 10px;
+  max-height: 760px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.similarity-accordion-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.similarity-accordion-trigger {
+  align-items: center;
+  background: #ffffff;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  padding: 13px 14px;
+  text-align: left;
+  width: 100%;
+}
+
+.similarity-accordion-trigger:hover,
+.similarity-accordion-trigger[aria-expanded="true"] {
+  background: var(--soft-blue);
+}
+
+.similarity-rank {
+  background: var(--sodexo-blue);
+  border-radius: var(--radius);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 8px;
+}
+
+.similarity-pair-summary {
+  align-items: start;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+}
+
+.similarity-report-summary {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.similarity-report-summary small,
+.similarity-metric-badge small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.similarity-report-summary strong {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.similarity-trigger-metrics {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.similarity-metric-badge {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 2px;
+  min-width: 92px;
+  padding: 7px 9px;
+  text-align: center;
+}
+
+.similarity-metric-badge strong {
+  color: var(--sodexo-blue);
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.similarity-metric-badge.is-strong {
+  background: #eef7f0;
+  border-color: rgba(31, 122, 58, 0.28);
+}
+
+.similarity-accordion-body {
+  background: #f8fafc;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+  padding: 15px;
+}
+
+.similarity-recommendation {
+  background: #ffffff;
+  border-left: 4px solid var(--sodexo-red);
+  border-radius: var(--radius);
+  color: var(--ink);
+  margin: 0;
+  padding: 12px;
+}
+
+.similarity-common-block,
+.similarity-exclusive-group {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 13px;
+}
+
+.similarity-common-block {
+  border-color: rgba(31, 122, 58, 0.28);
+}
+
+.similarity-common-block h4,
+.similarity-exclusive-group h4 {
+  color: var(--sodexo-blue);
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+
+.table-chip-list {
+  max-height: 180px;
+}
+
+.table-chip {
+  font-size: 12px;
+}
+
 @media (max-width: 920px) {
   .sidebar {
     border-bottom: 4px solid var(--sodexo-red);
@@ -1070,16 +1290,31 @@ code {
   .similarity-workspace,
   .similarity-compare,
   .similarity-kpis,
-  .similarity-exclusive {
+  .similarity-exclusive,
+  .similarity-summary-grid,
+  .similarity-pair-summary {
     grid-template-columns: 1fr;
   }
 
   .detail-actions,
   .pagination,
   .similarity-panel-heading,
-  .similarity-pair-toggle {
+  .similarity-pair-toggle,
+  .similarity-accordion-trigger {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .similarity-accordion-trigger {
+    grid-template-columns: 1fr;
+  }
+
+  .similarity-trigger-metrics {
+    justify-content: stretch;
+  }
+
+  .similarity-metric-badge {
+    flex: 1;
   }
 
   .similarity-stats {
